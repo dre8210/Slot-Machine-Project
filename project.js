@@ -10,11 +10,33 @@ const deposit = () =>{
 
     if (isNaN(numberDepositAmount) || numberDepositAmount <= 0){
     console.log('You have entered an invalid deposit amount. Try again!');
-    }else{
-    console.log(numberDepositAmount);
-    return numberDepositAmount;
+    } else {
+        console.log(numberDepositAmount);
+        return numberDepositAmount;
+      }
+  }
+}
+ //Determine the number of lines the user wants to bet on
+const getNumberOfLines = () => {
+  while(true){
+    const lines = prompt('Enter the number of lines to bet on(1 - 3): ')
+    const numberOfLines = parseFloat(lines)
+  
+    if (isNaN(numberOfLines) || numberOfLines > 3 || numberOfLines < 1){
+      console.log('You have entered an invalid number of lines. Try Again!');
+    } else {
+      console.log(numberOfLines);
+      return numberOfLines
     }
+  }
   
 }
-}
- deposit()
+
+
+
+
+
+
+
+ const depositAmount = deposit();
+ const numberOfLines = getNumberOfLines()
