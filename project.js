@@ -88,8 +88,42 @@ const spin = () => {
   return reels;
 }
 
+//Transpose the winning columns to rows
+const transpose = (reels) => {
+  const rows = [];
 
- const  reels = spin();
+  for (let i = 0; i < ROWS; i++) {
+    rows.push([]);
+    for (let j = 0; j < COLS; j++) {
+      rows[i].push(reels[j][i]);
+      
+    }
+    
+  }
+  
+  return rows;
+}
+
+//Formatting the output on the rows
+const printRows = (rows) => {
+  for (const row of rows){
+    let rowString = '';
+    for(const [i, symbol] of row.entries()){
+      rowString += symbol;
+      if (i != row.length - 1) {
+        rowString += ' | '
+      }
+
+    }
+    console.log(rowString);
+  }
+  
+
+}
+ 
  let balance = deposit();
  const numberOfLines = getNumberOfLines();
  const bet = getBet(balance, numberOfLines);
+ const  reels = spin(); 
+ const rows = transpose(reels);
+ printRows(rows);
