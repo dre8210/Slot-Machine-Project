@@ -1,14 +1,24 @@
 {
   "name": "slot-machine-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Javascript Code that simulates  a slot machine",
+  "homepage": "https://github.com/dre8210/Slot-Machine-Project#readme",
+  "bugs": {
+    "url": "https://github.com/dre8210/Slot-Machine-Project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dre8210/Slot-Machine-Project.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "project.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "prompt-sync": "^4.2.0"
-  }
+  },
+  "devDependencies": {}
 }
